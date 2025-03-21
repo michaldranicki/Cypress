@@ -6,6 +6,8 @@ dotenv.config();
 
 module.exports = defineConfig({
   e2e: {
+    viewportWidth: 1280,
+    viewportHeight: 720,
     setupNodeEvents(on, config) {
       config.env = {
         BASE_URL : process.env.CYPRESS_BASE_URL,

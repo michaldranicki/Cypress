@@ -184,6 +184,7 @@
     "yauzl": "^2.10.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
     "cypress": "^14.1.0",
     "typescript": "^5.8.2"
   }
