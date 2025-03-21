@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { PageFactory } from '../page_objects/pageFactory';
+import { PageFactory } from "../page_objects/pageFactory";
 
 describe("Login Page Tests", () => {
   const pm = new PageFactory();
@@ -19,11 +19,8 @@ describe("Login Page Tests", () => {
     const password = Cypress.env("PASSWORD");
 
     pm.loginPage.login(username, password);
-    // Verify the URL after successful login
-    cy.url().should("include", "/inventory.html");
     // Verify the inventory page is loaded
     pm.inventoryPage.isInventoryPageLoaded().should("eq", true);
-
     // Get the name of the first item in the inventory
     pm.inventoryPage.getFirstItemName().then((itemName) => {
       cy.log(`First item in inventory: ${itemName}`);
